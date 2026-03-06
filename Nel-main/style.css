@@ -55,8 +55,8 @@ header a{
 
     margin:5px;
     padding: 10px 12px;
-    font-size:1.2rem;
-    color: rgb(78, 2, 129);
+    font-size:1.0rem;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     background-color: white;
     border-radius: 10px;
@@ -64,8 +64,8 @@ header a{
 
 header a:hover{
 
-    color: rgb(213, 236, 4);
-    background-color: rgb(78, 2, 129) ;
+    color: rgb(248, 244, 0);
+    background-color: rgb(0, 0, 0) ;
 
 }
 
@@ -214,14 +214,15 @@ header{
 
 .jogador--snuffy:hover{
 
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
+    border-color:rgb(16, 233, 81);
 
 }
 
 .jogador--snuffy:hover .Jogador_Text,
 .jogador--snuffy:hover .Jogador_Title{
 
-    color:rgb(2, 194, 114)
+    color:rgb(16, 233, 81);
 
 }
 
@@ -244,6 +245,7 @@ header{
     padding:10px;
     min-height: 340px;
     width: 1250px;
+    border: 5px solid black;
 
 }
 
