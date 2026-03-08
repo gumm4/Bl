@@ -4,7 +4,6 @@ body {
 
     margin:0px;
     min-height: 100vh;
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows:
@@ -14,7 +13,7 @@ body {
         minmax(auto,100%);
     padding: 0;
     grid-template-areas: 
-    
+
     "header header header"
     "main main main"
     "aside aside aside"
@@ -111,7 +110,7 @@ header{
     transition: all 0.3s ease;
     padding:20px;
     min-height: 400px;
-    width: 380px;
+    width: 320px;
     border: 5px solid black;
  
 }
