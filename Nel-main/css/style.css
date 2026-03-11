@@ -142,8 +142,27 @@ header{
 .Jogador_Text{
 
     font-family: 'Oswald', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
 
 }
+
+.Jogador.ativo .Jogador_Text{
+
+    max-height: 500px;
+
+}
+
+.Jogador a{
+
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+
+
+}
+
 
 
 
