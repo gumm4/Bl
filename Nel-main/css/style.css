@@ -109,7 +109,7 @@ header{
     border-radius: 15px;
     transition: all 0.3s ease;
     padding:20px;
-    min-height: 400px;
+    min-height: 300px;
     width: 320px;
     border: 5px solid black;
  
@@ -230,15 +230,15 @@ header{
 }
 
 
-.jogador--snuffy:hover{
+.trainer--snuffy:hover{
 
     background-color: rgb(0, 0, 0);
     border-color:rgb(16, 233, 81);
 
 }
 
-.jogador--snuffy:hover .Jogador_Text,
-.jogador--snuffy:hover .Jogador_Title{
+.trainer--snuffy:hover .Tecnico_Text,
+.trainer--snuffy:hover .Tecnico_Title{
 
     color:rgb(16, 233, 81);
 
@@ -253,21 +253,21 @@ header{
 
 }
 
-.Treinador{
+.tecnico{
 
-    margin:40px;
+    margin:40px auto;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     transition: all 0.3s ease;
     padding:10px;
     min-height: 340px;
-    width: 1250px;
+    max-width: 1200px;
     border: 5px solid black;
 
 }
 
-.Treinador img{
+.tecnico img{
 
 
     width: 150px;
@@ -277,18 +277,53 @@ header{
 
 }
 
-.Treinador a img{
+.tecnico a img{
 
     width: 75px;
     height: 75px;
 
 }
 
-.Treinador a{
+.tecnico a{
 
     margin: 5px;
     width: 75px;
     height: 75px;
     padding:5px;
+    
+
+}
+
+.tecnico.ativo .Tecnico_Text{
+
+    display:block;
+    max-height: 500px;
+
+}
+
+
+.Tecnico_Title{
+
+    font-family: 'LimeLight', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+.Tecnico_Text,
+.Tecnico_Title{
+
+    transition: color 0.3s ease;
+
+}
+
+.Tecnico_Text{
+
+    font-family: 'Oswald', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+
 
 }
