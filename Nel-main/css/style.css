@@ -1,11 +1,17 @@
 
+*{
+
+    box-sizing: border-box;
+
+}
+
 
 body {
 
     margin:0px;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr ;
     grid-template-rows:
         minmax(75px, auto)
         1fr
@@ -14,10 +20,11 @@ body {
     padding: 0;
     grid-template-areas: 
 
-    "header header header"
-    "main main main"
-    "aside aside aside"
-    "footer footer footer";
+    "header"
+    "main"
+    "aside"
+    "footer";
+
     background-color: rgb(252, 252, 252);
 
 }
@@ -68,11 +75,6 @@ header a:hover{
 
 }
 
-article{
-
-    grid-area: article;
-
-}
 
 aside{
 
@@ -85,6 +87,7 @@ aside{
 main{
 
     grid-area: main;
+    padding-top: 20px;
 
 }
 
@@ -103,32 +106,34 @@ header{
 
 .Jogador{
 
-    margin:20px;
+    padding-top: 20px;
+    display:grid;
+    justify-items: center;
+    gap:10px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     transition: all 0.3s ease;
-    padding:20px;
+    width: 100%;
     min-height: 300px;
-    width: 320px;
-    border: 5px solid black;
+    border: 5px solid rgb(184, 157, 3);
  
 }
 .Jogador img{
 
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    margin:5px;
-    padding:5px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 15px;
+    padding:10px;
+
 
 }
 
 .Jogador_title,
 .Jogador_text {
 
-    transition: color 0.3s ease;
-    
+    transition: color 0.3s ease;  
 }
 
 .Jogador_Title{
@@ -142,28 +147,18 @@ header{
 .Jogador_Text{
 
     font-family: 'Oswald', sans-serif;
-    max-height: 0;
     overflow: hidden;
     transition: 0.4s;
+    display: none;
+    text-align: center;
 
 }
 
 .Jogador.ativo .Jogador_Text{
 
-    max-height: 500px;
+    display: block;
 
 }
-
-.Jogador a{
-
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.4s;
-
-
-}
-
-
 
 
 .jogador--lorenzo:hover .Jogador_Text,
@@ -205,7 +200,7 @@ header{
 
 .jogador--aiku:hover{
 
-    background-color: rgb(155, 207, 75);
+    background-color: rgb(139, 226, 8);
     border-color: rgb(2, 16, 219);
 
 }
@@ -216,16 +211,9 @@ header{
 
 }
 
-.jogador--aiku:hover:hover .Jogador_Title{
+.jogador--aiku:hover .Jogador_Title{
 
     color:rgb(19, 15, 224);
-
-}
-
-.Jogador a img{
-
-    width: 75px;
-    height: 75px;
 
 }
 
@@ -248,56 +236,48 @@ header{
 
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap:20px;
-    justify-content: center;
+    gap:25px;
+    align-items: start;
 
+}
+
+.Treinador{
+
+    display:grid;
+    gap: 40px;
+    justify-items: center;
+    padding:15px;
 }
 
 .tecnico{
 
-    margin:40px auto;
+    display: grid;
+    justify-items: center;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     transition: all 0.3s ease;
-    padding:10px;
-    min-height: 340px;
-    max-width: 1200px;
+    height: auto;
+    width: 100%;
     border: 5px solid black;
 
 }
 
 .tecnico img{
 
-
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-
-
-}
-
-.tecnico a img{
-
-    width: 75px;
-    height: 75px;
+    padding:10px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 15px;
 
 }
 
-.tecnico a{
-
-    margin: 5px;
-    width: 75px;
-    height: 75px;
-    padding:5px;
-    
-
-}
 
 .tecnico.ativo .Tecnico_Text{
 
     display:block;
-    max-height: 500px;
+    max-height: 100%;
 
 }
 
@@ -325,5 +305,37 @@ header{
     overflow: hidden;
     transition: 0.4s;
 
+
+}
+
+.funcao{
+
+    display: flex;
+    gap:5px;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+
+}
+
+.funcao span{
+
+    background: black;
+    color:white;
+    padding: 4px 8px;
+    border-radius:8px;
+    font-size: 0.8rem;
+
+
+}
+
+.Jogador:hover .funcao span{
+
+    opacity: 1;
+
+}
+
+.funcao span{
+
+    opacity: 0.7;
 
 }
